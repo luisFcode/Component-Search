@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Search</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <div class="search-box js-search-box">
+        <button class="search js-btn-search" >
+            <ion-icon name="search-outline"></ion-icon>
+        </button>
+        <div class="search-input">
+            <input type="text " class="js-input-search" placeholder="Pesquise aqui">
+        </div>
+        <button class="close js-close">
+            <ion-icon name="close-outline"></ion-icon>
+        </button>
+    </div>
+
+    <script>
+        const search_box = document.querySelector('.js-search-box')
+        const search_btn = document.querySelector('.search')
+        const btn_close = document.querySelector('.js-close')
+        const input = document.querySelector('.js-input-search')
+        
+        search_btn.addEventListener('click', () => {
+            search_box.classList.add('active');
+        })
+
+        btn_close.addEventListener('click', () => {
+            search_box.classList.remove('active');
+            input.value = '';
+        })
+    </script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
